@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #080808;
+    position: fixed;
+    width: 100%;
+   z-index: 1;
+}
+.navBarLinks{
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-right: 50px;
+    list-style: none;
+}
+.links{
+    color: #ffff;
+}
