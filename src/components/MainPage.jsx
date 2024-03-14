@@ -1,5 +1,5 @@
 import '../styles/MainPage.css'
-// import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
  
 
 export default function MainPage(){
