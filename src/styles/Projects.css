@@ -4,6 +4,9 @@
     align-items: center;
     gap: 20px;
 }
+.projectHeader{
+        margin:0px 0px 50px 0px;
+}
 .projectsMainContainer{
     margin: auto;
     width: 90%;
@@ -63,4 +66,30 @@
 }
 .ProjectsContainer:hover .layer{
     height: 100%;
+}
+.projectDescription{
+    text-align:justify;
+}
+@media only screen and (max-width: 768px) {
+    .cardsBody{
+        flex-direction: column;
+    }
+    .ProjectsContainer{
+        width: 100%;
+    }
+    .imageContainer{
+        height: max-content;
+    }
+    .projectDescription{
+        font-size: 13px;
+    }
+    .projectTitles{
+        margin: 0;
+    }
+    .projectHeader{
+       text-align: center;
+}
+.projectsMainContainer{
+    width: fit-content;
+}
 }

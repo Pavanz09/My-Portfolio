@@ -12,9 +12,7 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons';
 const Skills = () => {
   return (
     <div className='SkillsContainer'>
-    <h1 style={{
-margin:'0px 0px 50px 0px'
-    }}>Professional Skills</h1>
+    <h1 className='professionalSkillsHeader'>Professional Skills</h1>
     <div className='skillsMain'>
     <SkillsCards/> 
     </div>
@@ -50,7 +48,7 @@ function SkillsCards(){
     },
     {
       id:5,
-      techTitle: 'Tools',
+      techTitle: 'Dev Tools',
       icon:faScrewdriverWrench
     }
   ]
@@ -115,7 +113,7 @@ return(
                 <p className='techStackData'>{item.techStack}</p>
               </div>
             ))}
-            {item.techTitle === 'Tools' && Tools.map((item, index) => (
+            {item.techTitle === 'Dev Tools' && Tools.map((item, index) => (
               <div key={index} className='techStack' style={{ border: `1px solid ${item.color}` }}>
                 <p className='techStackData'>{item.techStack}</p>
               </div>
@@ -131,11 +129,11 @@ function ColorDescription(){
   return(
     <>
     <div className='colorDescriptionBox'>
-    <p style={{marginBottom:'-15px'}}>
+    <p className='colorDescriptionBoxName'>
     <FontAwesomeIcon icon={faSquare} style={{color:'#ff0000'}} />&nbsp; Proficient</p>
-    <p style={{marginBottom:'-15px'}}>
+    <p className='colorDescriptionBoxName'>
     <FontAwesomeIcon icon={faSquare} style={{color:'#FFC000'}}/>&nbsp; Intermediate</p>
-    <p style={{marginBottom:'-15px'}}>
+    <p className='colorDescriptionBoxName'>
     <FontAwesomeIcon icon={faSquare} style={{color:'#84ff00'}}/>&nbsp; Beginner</p>
     </div>
     </>

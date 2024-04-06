@@ -3,7 +3,110 @@
     height: 100vh;
     width: 90%;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+}
+.intoSection{
+    width: 60%;
+    margin: auto;
+}
+.introName{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 100px;
+    font-style: italic;
+}
+.introSubHeader{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder; 
+    font-size: 40px;
+    font-style: italic;
+}
+.socialPlatformSection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin: auto;
+    width: 40%;
+}
+  .buttonSection {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .buttons{
+    color: #000000;
+    background-color: #FF004F;
+    border-radius: 10px;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out all;
+    -webkit-transition: 0.3s ease-in-out all;
+    -moz-transition: 0.3s ease-in-out all;
+    -ms-transition: 0.3s ease-in-out all;
+    -o-transition: 0.3s ease-in-out all;
+}
+  .buttons:hover{
+    color: #FF004F;
+    background-color: transparent;
+    border: 1px solid #FF004F;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.socialPlatformSection {
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     margin: auto;
+    width: 40%;
+    align-items: end;
+    gap: 40px;
+}
+.quickSocialButton{
+    color: #FF004F;
+}
+.quickSocialButton:hover{
+    color: #ffff;
+}
+.mobileNavbar{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+.intoSection{
+    width: 100%;
+    margin: 0;
+}
+.homePageMainContainer{
+display: flex;
+flex-direction: column;
+}
+.socialPlatformSection{
+    flex-direction: row;
+    margin: 70px 0px 0px 0px;
+    width: 100%;
+}
+.introSubHeader{
+    font-size: 25px;
+}
+.introName{
+    font-size: 70px;
+}
+.buttonSection{
+    justify-content: center;
+}
+.mobileNavbar{
+    display: block;
+    background-color: #FF004F;
+    width: 60%;
+    margin-top: 200px;
+    position: fixed;
+}
 }

@@ -123,36 +123,40 @@
     -o-border-radius: 20px;
 
 }
-
+.socialPlatformHeader{
+    margin: 0px;
+    color: #adadad;
+}
 
 @media only screen and (max-width: 768px) {
     .contactCardBody{
-    grid-template-columns: auto;
-    height: max-content;
-    overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        height: max-content;
     }
-.contactCard{
-    height: max-content;
-    padding: 25px 0px 26px 0px;
-
-}
-.cardLeft{
-    height: 620px ;
-    width: fit-content;
-}
-.cardRight{
-    width: fit-content;
-}
-.mapSection{
-    width: fit-content;
-}
-.contactUsHeader{
-    margin-top: 20px;
-}
-.addressSection{
-    padding: 20px;
-}
-.formAlign{
-    width: 80%
-}
+    .contactCard{
+        width: 100%;
+        height: max-content;
+    }
+    .cardLeft{
+        margin-bottom: 100px;
+    }
+    .cardRight{
+        margin-top: 40px;
+        gap: 20px;
+    }
+    .socialPlatform{
+        width: 100%;
+    }
+    .socialPlatformHeader{
+        font-size: 13px;
+    }
+    .contactMeHeader{
+        text-align: center;
+    }
+    .contactMainContainer{
+        width: fit-content;
+    }
   };

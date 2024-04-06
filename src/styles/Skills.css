@@ -79,3 +79,29 @@
     padding: 0px 15px 0px 15px;
     background-color: transparent;
 }
+.colorDescriptionBoxName{
+    margin-bottom: -15px;
+}
+.professionalSkillsHeader{
+    margin:0px 0px 50px 0px;
+}
+@media only screen and (max-width: 768px) {
+    .skillsBody{
+        height: max-content;
+        width: 90%;
+    }
+    .SkillsContainer{
+        padding: 0;
+    }
+    .colorDescriptionBox {
+        gap: 9px;
+        flex-direction: row;
+        margin: auto;
+    }
+    .colorDescriptionBoxName{
+        margin-bottom: 20px;
+    }
+    .professionalSkillsHeader{
+       text-align: center;
+    }
+}

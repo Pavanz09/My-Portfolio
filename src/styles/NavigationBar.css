@@ -1,9 +1,10 @@
-.navbar{
+.headerSection{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #080808;
     position: fixed;
+    flex-wrap: wrap;
     width: 100%;
    z-index: 1;
 }
@@ -13,7 +14,20 @@
     gap: 40px;
     margin-right: 50px;
     list-style: none;
+    flex-wrap: wrap;
 }
 .links{
     color: #ffff;
+}
+.navbar{
+display: block;
+}
+/* .closeIcon , .menuIcon{
+    display: none;
+    
+} */
+@media only screen and (max-width: 768px) {
+.navbar nav{
+display: none;
+}
 }

@@ -8,9 +8,7 @@ import portfolioImage from '../assets/Meyawo.png';
 const Projects = () => {
   return(
     <div className='projectsMainContainer'>
-    <h1 style={{
-margin:'0px 0px 50px 0px'
-    }}>Projects</h1>
+    <h1 className='projectHeader'>Projects</h1>
     <div className='cardsBody'>
       <Cards/>
     </div>
@@ -50,8 +48,8 @@ const projectsData = [
       </div>
       </div>
       <div className='layer'>
-        <h3>{project.title}</h3>
-        <p style={{textAlign:'justify'}}>{project.description}</p>
+        <h3 className='projectTitles'>{project.title}</h3>
+        <p className='projectDescription'>{project.description}</p>
         <button>Read more</button>
       </div>
     </div>
