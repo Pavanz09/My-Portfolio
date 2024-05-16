@@ -10,7 +10,7 @@
 .projectsMainContainer{
     margin: auto;
     width: 90%;
-    padding: 30px;
+    padding:30px;
 }
 .ProjectsContainer{
     display: grid;
@@ -31,7 +31,7 @@
 }
 .imageContainer{
     width: 100%;
-    height: 410px;
+    height: 390px;
 }
 .imageOtp{
     width: 100%;

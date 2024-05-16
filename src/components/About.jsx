@@ -8,7 +8,7 @@ import myProfileImage from '../assets/IMG_20180320_141506.jpg';
 const About = () => {
   return (
     <>
-    <div className='aboutMainContainer'>
+    <div className='aboutMainContainer' id='about'>
     <div className='myIntroConatiner'>
     <h1>About<span style={{color:'#FF004F', margin:'0px'}}> Me</span></h1>
     <div className='myIntroduction'>

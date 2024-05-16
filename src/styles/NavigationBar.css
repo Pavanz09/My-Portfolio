@@ -16,12 +16,21 @@
     list-style: none;
     flex-wrap: wrap;
 }
-.links{
+.list{
     color: #ffff;
+    transition: 0.3s ease-in all;
+    -webkit-transition: 0.3s ease-in all;
+    -moz-transition: 0.3s ease-in all;
+    -ms-transition: 0.3s ease-in all;
+    -o-transition: 0.3s ease-in all;
+}
+.list:hover{
+    color: #FF004F;
 }
 .navbar{
 display: block;
 }
+
 /* .closeIcon , .menuIcon{
     display: none;
     

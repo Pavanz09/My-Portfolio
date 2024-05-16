@@ -11,7 +11,7 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Skills = () => {
   return (
-    <div className='SkillsContainer'>
+    <div className='SkillsContainer' id='skills'>
     <h1 className='professionalSkillsHeader'>Professional Skills</h1>
     <div className='skillsMain'>
     <SkillsCards/> 

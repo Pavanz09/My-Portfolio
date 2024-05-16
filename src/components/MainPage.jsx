@@ -15,7 +15,7 @@ export default function MainPage(){
   });
     return (
       <>
-      <div className='homePageMainContainer'>
+      <div className='homePageMainContainer' id='home'>
       <div className='intoSection'>
       <h2 className='introSubHeader'>Hello<span style={{color:'#FF004F'}} >!</span></h2>
       <h1 className='introName'>I'm <span style={{color:'#FF004F'}}>Pavan</span>
@@ -28,8 +28,8 @@ export default function MainPage(){
         <p style={{margin:'20px 0px 0px 0px',fontFamily:'sans-serif', fontSize:'20px' ,fontStyle:'italic', color:'rgb(167, 167, 167)'}}>I love coming up with new ideas and making cool stuff online. <br />
          Let's team up and create something awesome together!</p>
          <div className='buttonSection'>
-         <button className='buttons'><FontAwesomeIcon icon={faPaperPlane} /> Talk to me</button>
-         <button className='buttons'><FontAwesomeIcon icon={faFile} /> Download CV</button>
+         <a href="mailto:pavansatyappanavar6@gmail.com" className='buttons'><FontAwesomeIcon icon={faPaperPlane}/> Talk to me</a>
+         <a href="../assets/Resume_Pavan_S.pdf" download="Resume_Pavan_S.pdf" className='buttons'><FontAwesomeIcon icon={faFile} /> Download CV</a>
          </div>
         </div>
         <div className='socialPlatformSection'>
@@ -40,9 +40,6 @@ export default function MainPage(){
         <a href="https://github.com/Pavanz09" className='quickSocialButton'><FontAwesomeIcon style={{fontSize:'40px'}} icon={faSquareGithub} /></a>
         </div>
       </div>
-        <div className='mobileNavbar'>
-        <a href="https://github.com/Pavanz09" className='quickSocialButton'><FontAwesomeIcon style={{fontSize:'40px'}} icon={faSquareGithub} /></a>
-        </div>
       </>
     )
   };

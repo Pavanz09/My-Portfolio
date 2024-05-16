@@ -1,8 +1,6 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import  '../styles/NavigationBar.css'
-// import {faBars , faCircleXmark} from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-scroll';
 
 const NavigationBar = () => {
 
@@ -10,40 +8,19 @@ const NavigationBar = () => {
     <>
     <div className='headerSection'>
     <div className='headerName'>
-        <h2 style={{marginLeft:'40px'}}>Portfolio</h2>
+        <h1 style={{marginLeft:'20px',fontSize:'30px'}}>Portfolio<span style={{color:'#FF004F'}}>.</span></h1>
     </div>
     <div className='navbar'>
     <nav>
       <ul  className='navBarLinks'>
-        <li  className='list'><a href="/" className='links'>Home</a></li>
-        <li  className='list'><a href="/about" className='links'>About</a></li>
-        <li  className='list'><a href="/projects" className='links'>Projects</a></li>
-        <li  className='list'><a href="/skills" className='links'>Skills</a></li>
-        <li  className='list'><a href="/contact" className='links'>Contact</a></li>
+        <Link  className='list' activeClass='active' to='home' spy={true} smooth={true} offset={-100}>Home</Link>
+        <Link  className='list' activeClass='active' to='about' spy={true} smooth={true} offset={-100}>About</Link>
+        <Link  className='list' activeClass='active' to='skills' spy={true} smooth={true} offset={-100}>Skills</Link>
+        <Link  className='list' activeClass='active' to='projects' spy={true} smooth={true} offset={-100}>Projects</Link>
+        <Link  className='list' activeClass='active' to='contact' spy={true} smooth={true} offset={-100}>Contact</Link>
       </ul>
     </nav>
     </div>
-    {/* <div className='mobileNavBar'>
-    <nav>
-    <ul  className='navBarMpbileLinks'>
-        <li>
-          <Link href="/" className='links'>Home</Link>
-        </li>
-        <li>
-          <Link href="/about" className='links'>About</Link>
-        </li>
-        <li>
-          <Link href="/projects" className='links'>Projects</Link>
-        </li>
-        <li>
-          <Link href="/skills" className='links'>Skills</Link>
-        </li>
-        <li>
-          <Link href="/contact" className='links'>Contact</Link>
-        </li>
-      </ul>
-    </nav>
-    </div> */}
     </div>
     </>
   );

@@ -40,7 +40,7 @@ export default function Contact() {
     }
   }
   return (
-    <div className='contactMainContainer'>
+    <div className='contactMainContainer' id='contact'>
     <h1 className='contactMeHeader'>Contact Me</h1>
       <div className="ContactUsContainer">
         <div className="contactCard">
@@ -62,17 +62,17 @@ export default function Contact() {
               <div className="socialPlatform">
               <p style={{margin:'0px'}}><FontAwesomeIcon icon={faEnvelope} style={{fontSize:'20px',color:'#FF004F'}}/> Email </p>
               <h3 className='socialPlatformHeader'>pavansatyappanavar6@gmail.com</h3>
-              <a href="mailto:pavansatyappanavar6@gmail.com" style={{color:'#FF004F',fontSize:'12px'}}>Send Message</a>
+              <a href="mailto:pavansatyappanavar6@gmail.com" className='SocialContactLinks'>Send Message</a>
               </div>
               <div className="socialPlatform">
               <p style={{margin:'0px'}}><FontAwesomeIcon icon={faLinkedin} style={{fontSize:'20px',color:'#FF004F'}}/> LinkedIn </p>
               <h3 className='socialPlatformHeader'>Pavan Satyappanavar</h3>
-              <a href="https://www.linkedin.com/in/pavan-satyappanavar-b54a11243/" style={{color:'#FF004F',fontSize:'12px'}}>Connect</a>
+              <a href="https://www.linkedin.com/in/pavan-satyappanavar-b54a11243/" className='SocialContactLinks'>Connect</a>
               </div>
               <div className="socialPlatform">
               <p style={{margin:'0px'}}><FontAwesomeIcon icon={faInstagram} style={{fontSize:'20px',color:'#FF004F'}}/> Instagram </p>
               <h3 className='socialPlatformHeader'>@pavanz09</h3>
-              <a href="https://instagram.com/pavanz09?igshid=ZDdkNTZiNTM=" style={{color:'#FF004F',fontSize:'12px'}}>Follow</a>
+              <a href="https://instagram.com/pavanz09?igshid=ZDdkNTZiNTM=" className='SocialContactLinks'>Follow</a>
               </div>
             </div>
           </div>

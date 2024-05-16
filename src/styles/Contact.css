@@ -6,14 +6,12 @@
 .contactMainContainer{
     margin: auto;
     width: 90%;
-    padding: 30px;
 }
 .contactCard{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 700px;
     /* background-color: #1e1e1e; */
 }
 .contactCardBody{
@@ -23,7 +21,8 @@
     background-color: #0f0f0f;
     border-radius: 10px;
     width: 90%;
-    height: 600px;
+    height: 550px;
+    margin-bottom: 30px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -51,7 +50,7 @@
 }
 .inputFields{
     width: 75%;
-    height: 25px;
+    height: 20px;
     background-color: transparent;
     border: 1px solid #FF004F;
     padding: 20px;
@@ -126,6 +125,18 @@
 .socialPlatformHeader{
     margin: 0px;
     color: #adadad;
+}
+.SocialContactLinks{
+    color: rgb(255, 0, 79);
+    font-size: 12px;
+    transition: 0.3s ease-in-out all;
+    -webkit-transition: 0.3s ease-in-out all;
+    -moz-transition: 0.3s ease-in-out all;
+    -ms-transition: 0.3s ease-in-out all;
+    -o-transition: 0.3s ease-in-out all;
+}
+.SocialContactLinks:hover{
+    color: #ffff;
 }
 
 @media only screen and (max-width: 768px) {

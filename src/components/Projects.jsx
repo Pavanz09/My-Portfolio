@@ -2,12 +2,12 @@ import React from 'react';
 import '../styles/Projects.css';
 import otpImage from '../assets/sms-authentication-banner.jpg';
 import loanImage from '../assets/Best-Instant-Personal-Loan-Apps-in-India-1.jpg';
-import portfolioImage from '../assets/Meyawo.png';
+import portfolioImage from '../assets/PavanPortfolio.png';
 
 
 const Projects = () => {
   return(
-    <div className='projectsMainContainer'>
+    <div className='projectsMainContainer' id='projects'>
     <h1 className='projectHeader'>Projects</h1>
     <div className='cardsBody'>
       <Cards/>
