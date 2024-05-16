@@ -12,7 +12,7 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons';
 const Skills = () => {
   return (
     <div className='SkillsContainer' id='skills'>
-    <h1 className='professionalSkillsHeader'>Professional Skills</h1>
+    <h1 className='professionalSkillsHeader'>Professional<span style={{color:'#FF004F'}}> Skills</span></h1>
     <div className='skillsMain'>
     <SkillsCards/> 
     </div>

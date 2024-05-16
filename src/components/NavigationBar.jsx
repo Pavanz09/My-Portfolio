@@ -8,7 +8,7 @@ const NavigationBar = () => {
     <>
     <div className='headerSection'>
     <div className='headerName'>
-        <h1 style={{marginLeft:'20px',fontSize:'30px'}}>Portfolio<span style={{color:'#FF004F'}}>.</span></h1>
+        <h1 style={{marginLeft:'20px',fontSize:'30px'}}>Pavan<span style={{color:'#FF004F'}}>.</span></h1>
     </div>
     <div className='navbar'>
     <nav>

@@ -41,7 +41,7 @@ export default function Contact() {
   }
   return (
     <div className='contactMainContainer' id='contact'>
-    <h1 className='contactMeHeader'>Contact Me</h1>
+    <h1 className='contactMeHeader'>Contact<span style={{color:'#FF004F'}}> Me</span></h1>
       <div className="ContactUsContainer">
         <div className="contactCard">
           <div className="contactCardBody">
