@@ -9,7 +9,7 @@ const Projects = () => {
   return(
     <div className='projectsMainContainer' id='projects'>
     <h1 className='projectHeader'><span style={{color:'#FF004F'}}>My </span>Projects</h1>
-    <div className='cardsBody'>
+    <div className='cardSectionBody'>
       <Cards/>
     </div>
     </div>
