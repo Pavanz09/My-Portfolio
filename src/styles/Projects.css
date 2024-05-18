@@ -1,9 +1,3 @@
-#cardSectionBody{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
 .projectHeader{
         margin:0px 0px 50px 0px;
 }
@@ -11,6 +5,12 @@
     margin: auto;
     width: 90%;
     padding:30px;
+}
+#cardSectionBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .ProjectsContainer{
     display: grid;
