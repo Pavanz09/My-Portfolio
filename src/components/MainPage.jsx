@@ -29,7 +29,7 @@ export default function MainPage(){
          Let's team up and create something awesome together!</p>
          <div className='buttonSection'>
          <a href="mailto:pavansatyappanavar6@gmail.com" className='buttons'><FontAwesomeIcon icon={faPaperPlane}/> Talk to me</a>
-         <a href="../assets/Resume_Pavan_S.pdf" download="Resume_Pavan_S.pdf" className='buttons'><FontAwesomeIcon icon={faFile} /> Download CV</a>
+         <a href="/src/assets/Resume_Pavan_S.pdf" download="Resume_Pavan_S.pdf" className='buttons'><FontAwesomeIcon icon={faFile} /> Download CV</a>
          </div>
         </div>
         <div className='socialPlatformSection'>
