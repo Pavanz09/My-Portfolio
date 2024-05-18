@@ -8,7 +8,7 @@ import portfolioImage from '../assets/PavanPortfolio.png';
 const Projects = () => {
   return(
     <div className='projectsMainContainer' id='projects'>
-    <h1 className='projectHeader'><span style={{color:'#FF004F'}}>My </span>Projects</h1>
+    <h1 className='projectHeader'><span style={{color:'#FF004F'}}>My </span>Portfolio</h1>
     <div id='cardSectionBody'>
       <Cards/>
     </div>
