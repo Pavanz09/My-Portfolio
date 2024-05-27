@@ -63,16 +63,14 @@ function SkillsCards(){
 
   const BackEndTech = [
     { techStack: 'Java' ,color: '#FFC000'},
-    { techStack: 'JDBC' ,color: '#FFC000'},
-    { techStack: 'Spring DI' ,color: '#84ff00'},
-    { techStack: 'Hibernate' ,color: '#84ff00'},
+    { techStack: 'Spring' ,color: '#84ff00'},
     { techStack: 'Node JS' ,color: '#84ff00'},
     { techStack: 'Rest API' ,color: '#FFC000'}
   ];
 
   const DatabaseTech = [
     { techStack: 'MySQL' ,color: '#ff0000'},
-    { techStack: 'MongoDB' ,color: '#84ff00'}
+    { techStack: 'Postgre SQL' ,color: '#84ff00'}
   ];
 
   const Design = [

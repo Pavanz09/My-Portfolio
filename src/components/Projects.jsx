@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Projects.css';
 import otpImage from '../assets/sms-authentication-banner.jpg';
 import loanImage from '../assets/Best-Instant-Personal-Loan-Apps-in-India-1.jpg';
-import portfolioImage from '../assets/PavanPortfolio.png';
+import hrms from '../assets/HRMS.png';
 
 
 const Projects = () => {
@@ -32,9 +32,9 @@ const projectsData = [
     image: loanImage
   },
   {
-    title: "Portfolio Website",
-    description: "My portfolio website, crafted with ReactJS, HTML, and CSS, embodies my skills and style in a sleek design. It showcases my work and expertise, inviting potential collaborators and clients to connect effortlessly.",
-    image: portfolioImage
+    title: "Human Resource Management System",
+    description: "Currently developing a Human Resource Management System for Teksolvent using the PERN stack (PostgreSQL, Express, React, Node.js). The project focuses on creating a scalable, efficient platform for managing employee data, payroll, and performance tracking",
+    image: hrms
   }
 ]
   return(
