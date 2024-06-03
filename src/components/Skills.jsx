@@ -56,6 +56,7 @@ function SkillsCards(){
     { techStack: 'HTML' ,color: '#ff0000'},
     { techStack: 'CSS' ,color: '#ff0000'},
     { techStack: 'Sass' ,color: '#84ff00'},
+    { techStack: 'WordPress' ,color: '#84ff00'},
     { techStack: 'JavaScript' ,color: '#FFC000'},
     { techStack: 'Angular JS' ,color: '#FFC000'},
     { techStack: 'React JS' ,color: '#FFC000'}
