@@ -37,9 +37,9 @@ export default About;
       const FlipCardData = [
         {
           title: 'Experinece',
-          subTitle: '1+ Years',
-          backCardTitle: 'TekSolvent',
-          position: 'Software Developer',
+          subTitle: '2+ Years',
+          backCardTitle: 'Atom8',
+          position: 'SDE 1',
           icon: faStar
         },
         {
