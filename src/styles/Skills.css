@@ -58,7 +58,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 35px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     margin: 10px;
@@ -67,7 +66,8 @@
     -o-border-radius: 5px;
 }
 .techStackData{
-    padding: 0px 10px 0px 10px;
+    padding: 5px 10px;
+    margin: 0;
 }
 .colorDescriptionBox{
     display: flex;
