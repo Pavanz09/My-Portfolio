@@ -38,7 +38,7 @@ export default About;
         {
           title: 'Experinece',
           subTitle: '2+ Years',
-          backCardTitle: 'Atom8',
+          backCardTitle: 'ATOM8 Robotic Labs Pvt Ltd',
           position: 'SDE 1',
           icon: faStar
         },
