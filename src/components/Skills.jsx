@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Skills.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode , faCloud , faServer , faDatabase , faScrewdriverWrench , faSquare , faMobile} from '@fortawesome/free-solid-svg-icons';
+import { faCode , faCloud , faServer , faDatabase , faScrewdriverWrench , faSquare , faMobileScreenButton} from '@fortawesome/free-solid-svg-icons';
 
 
 
