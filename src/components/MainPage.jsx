@@ -8,12 +8,12 @@ import { faSquareEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function MainPage(){
   const [text] = useTypewriter({
-words: [
-  'Full Stack Developer',
-  'Mobile App Developer',
-  'Web Developer',
-  'iOS/Android DevOps',
-];
+   words: {
+    'Full Stack Developer',
+    'Mobile App Developer',
+    'Web Developer',
+    'iOS/Android DevOps',
+    },
     loop: {},
     typeSpeed: 120,
     deleteSpeed: 80
