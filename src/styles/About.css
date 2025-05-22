@@ -104,7 +104,7 @@
     height: max-content;
     flex-direction: column;
   }
-  .myIntrocontainer {
-    width: 100%;
+  .myIntroConatiner {
+       padding: 0 20px;
   }
   }
