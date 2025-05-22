@@ -53,37 +53,42 @@ function SkillsCards(){
     }
   ]
   const FrontEndTech = [
-    { techStack: 'HTML' ,color: '#ff0000'},
-    { techStack: 'CSS' ,color: '#ff0000'},
-    { techStack: 'Sass' ,color: '#84ff00'},
+    { techStack: 'HTML/CSS/Sass' ,color: '#ff0000'},
     { techStack: 'WordPress' ,color: '#84ff00'},
-    { techStack: 'JavaScript' ,color: '#FFC000'},
-    { techStack: 'Angular JS' ,color: '#FFC000'},
-    { techStack: 'React JS' ,color: '#FFC000'}
+    { techStack: 'JavaScript / TypeScript' ,color: '#FFC000'},
+    { techStack: 'React JS' ,color: '#FFC000'},
+    { techStack: 'React Native' ,color: '#FFC000'}
   ];
 
   const BackEndTech = [
     { techStack: 'Java' ,color: '#FFC000'},
-    { techStack: 'Spring' ,color: '#84ff00'},
-    { techStack: 'Node JS' ,color: '#84ff00'},
+    { techStack: 'Node.js / Express.js' ,color: '#FFC000'},
+    { techStack: 'Go Lang' ,color: '#84ff00'},
     { techStack: 'Rest API' ,color: '#FFC000'}
   ];
 
   const DatabaseTech = [
     { techStack: 'MySQL' ,color: '#ff0000'},
-    { techStack: 'Postgre SQL' ,color: '#84ff00'}
+    { techStack: 'Postgre SQL' ,color: '#FFC000'}
   ];
 
-  const Design = [
-    { techStack: 'Figma' ,color: '#FFC000'},
-    { techStack: 'Photoshop' ,color: '#84ff00'}
+  const cloudHosting = [
+    { techStack: 'Firebase – Auth, Firestore' ,color: '#FFC000'},
+    { techStack: 'AWS - IAM, Lambda, EC2, ECS, S3, CodeBuild, API Gateway, SQS' ,color: '#84ff00'}
+  ];
+
+  const mobileDevopsDeployment = [
+    { techStack: 'Fastlane – iOS & Android App Automation' ,color: '#FFC000'},
+    { techStack: 'App Distribution - App Store / Play Store Deployment' ,color: '#ff0000'},
+    { techStack: 'Native Build Tools - Xcode / Android Studio' ,color: '#FFC000'}
   ];
 
   const Tools = [
     { techStack: 'Eclipse' ,color: '#ff0000'},
     { techStack: 'VS Code' ,color: '#FFC000'},
-    { techStack: 'GitHub' ,color: '#FFC000'},
-    { techStack: 'PostMan' ,color: '#FFC000'}
+    { techStack: 'GitHub / GitLab' ,color: '#FFC000'},
+    { techStack: 'PostMan' ,color: '#FFC000'},
+    { techStack: 'ngrok' ,color: '#FFC000'}
   ];
 
 return(
@@ -107,7 +112,12 @@ return(
                 <p className='techStackData'>{item.techStack}</p>
               </div>
             ))}
-            {item.techTitle === 'Design' && Design.map((item, index) => (
+            {item.techTitle === 'Mobile DevOps / Deployment' && mobileDevopsDeployment.map((item, index) => (
+              <div key={index} className='techStack' style={{ border: `1px solid ${item.color}` }}>
+                <p className='techStackData'>{item.techStack}</p>
+              </div>
+            ))}
+            {item.techTitle === 'Cloud & Hosting' && cloudHosting.map((item, index) => (
               <div key={index} className='techStack' style={{ border: `1px solid ${item.color}` }}>
                 <p className='techStackData'>{item.techStack}</p>
               </div>
