@@ -1,12 +1,8 @@
 import React from 'react';
 import '../styles/Skills.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { faServer } from '@fortawesome/free-solid-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
-import { faSprayCan } from '@fortawesome/free-solid-svg-icons';
-import { faSquare } from '@fortawesome/free-solid-svg-icons';
+import { faCode , faCloud , faServer , faDatabase , faScrewdriverWrench , faSquare , faMobile} from '@fortawesome/free-solid-svg-icons';
+
 
 
 const Skills = () => {
@@ -43,11 +39,16 @@ function SkillsCards(){
     },
     {
       id:4,
-      techTitle: 'Design',
-      icon:faSprayCan
+      techTitle: 'Mobile DevOps / Deployment',
+      icon:faMobileScreenButton
     },
     {
       id:5,
+      techTitle: 'Cloud & Hosting',
+      icon:faCloud
+    },
+    {
+      id:6,
       techTitle: 'Dev Tools',
       icon:faScrewdriverWrench
     }
@@ -72,15 +73,15 @@ function SkillsCards(){
     { techStack: 'Postgre SQL' ,color: '#FFC000'}
   ];
 
-  const cloudHosting = [
-    { techStack: 'Firebase – Auth, Firestore' ,color: '#FFC000'},
-    { techStack: 'AWS - IAM, Lambda, EC2, ECS, S3, CodeBuild, API Gateway, SQS' ,color: '#84ff00'}
-  ];
-
   const mobileDevopsDeployment = [
     { techStack: 'Fastlane – iOS & Android App Automation' ,color: '#FFC000'},
     { techStack: 'App Distribution - App Store / Play Store Deployment' ,color: '#ff0000'},
     { techStack: 'Native Build Tools - Xcode / Android Studio' ,color: '#FFC000'}
+  ];
+
+  const cloudHosting = [
+    { techStack: 'Firebase – Auth, Firestore' ,color: '#FFC000'},
+    { techStack: 'AWS - IAM, Lambda, EC2, ECS, S3, CodeBuild, API Gateway, SQS' ,color: '#84ff00'}
   ];
 
   const Tools = [
