@@ -14,8 +14,6 @@ words: [
   'Web Dev',
   'iOS/Android Ops',
 ];
-
-
     loop: {},
     typeSpeed: 120,
     deleteSpeed: 80
@@ -32,8 +30,7 @@ words: [
         <span style={{color:'#FF004F'}}>
           <Cursor cursorStyle='|'/>
         </span></h2>
-        <p style={{margin:'20px 0px 0px 0px',fontFamily:'sans-serif', fontSize:'20px' ,fontStyle:'italic', color:'rgb(167, 167, 167)'}}>I love coming up with new ideas and making cool stuff online. <br />
-         Let's team up and create something awesome together!</p>
+        <p style={{margin:'20px 0px 0px 0px',fontFamily:'sans-serif', fontSize:'20px' ,fontStyle:'italic', color:'rgb(167, 167, 167)'}}>I enjoy turning ideas into impactful digital products—whether it’s on web or mobile. Let’s collaborate and build something awesome together!</p>
          <div className='buttonSection'>
          <a href="mailto:pavansatyappanavar6@gmail.com" className='buttons'><FontAwesomeIcon icon={faPaperPlane}/> Talk to me</a>
          <a href="/src/assets/Resume_Pavan_S.pdf" download="Resume_Pavan_S.pdf" className='buttons'><FontAwesomeIcon icon={faFile} /> Download CV</a>
