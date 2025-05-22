@@ -39,7 +39,7 @@ export default About;
           title: 'Experinece',
           subTitle: '2+ Years',
           backCardTitle: 'ATOM8 Robotic Labs Pvt Ltd',
-          position: 'SDE 1',
+          position: 'Software Development Engineer 1',
           icon: faStar
         },
         {
