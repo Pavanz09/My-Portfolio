@@ -13,13 +13,13 @@ const About = () => {
     <h1>About<span style={{color:'#FF004F', margin:'0px'}}> Me</span></h1>
     <div className='myIntroduction'>
     <p style="text-align: justify; line-height: 27px;">
-    Hello and welcome! I’m <span style="color: rgb(255, 0, 79); font-weight: bolder;">Pavan Satyappanavar</span>, a passionate Full Stack Web Developer. My journey began at Jain College of Engineering, where I built a strong foundation in technology. Since then, I have focused on improving my skills in web development, web design, photo editing, and video editing. I take pride in delivering high-quality work that meets both creative and technical goals.
+    Hello and welcome! I’m <span style="color: rgb(255, 0, 79); font-weight: bolder;">Pavan Satyappanavar</span>, a dedicated Full Stack Web Developer with a strong background in software engineering from Jain College of Engineering. My professional journey has equipped me with hands-on experience in modern web development, UI/UX design, and frontend-backend integration. In addition to coding, I actively work on creative projects involving photo and video editing, ensuring a well-rounded approach to visual presentation.
     <br><br>
-    Outside of development, I enjoy playing PC games, which inspire many of my creative ideas. Gaming helps me think differently and bring more interactive and engaging elements into my projects.
+    I'm passionate about delivering scalable, high-performance digital solutions that are both visually appealing and functionally robust. My experience spans across React, Node.js, AWS, cloud deployment, automation scripting with Shell, and mobile development with React Native.
     <br><br>
-    I also enjoy traveling and exploring new places. These experiences give me fresh perspectives that I apply to my work, helping me create designs that are both unique and meaningful.
+    Outside of work, I draw creative inspiration from PC gaming and travel. Both experiences help me approach challenges with a fresh perspective and inject a sense of interactivity and exploration into my projects.
     <br><br>
-    Thank you for visiting my portfolio. I look forward to the opportunity to work together and bring your ideas to life in a professional and creative way.
+    Thank you for taking the time to explore my portfolio. I’m excited about the opportunity to collaborate and contribute to meaningful digital experiences.
     </p>
     </div>
     <div className='myIntrosecondSection'>
