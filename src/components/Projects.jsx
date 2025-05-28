@@ -50,7 +50,6 @@ const projectsData = [
       <div className='layer'>
         <h3 className='projectTitles'>{project.title}</h3>
         <p className='projectDescription'>{project.description}</p>
-        <button>Read more</button>
       </div>
     </div>
     ))}
