@@ -12,14 +12,16 @@ const About = () => {
     <div className='myIntroConatiner'>
     <h1>About<span style={{color:'#FF004F', margin:'0px'}}> Me</span></h1>
     <div className='myIntroduction'>
-    <p style={{textAlign:'justify',lineHeight:'27px'}}>
-    Welcome to my digital haven! I'm <span style={{color:'#FF004F' , fontWeight:'bolder'}}>Pavan Satyappanavar</span>,a dedicated Full Stack web developer. My journey started at Jain College of Engineering, where I began to develop my skills. Since then, I've focused on refining my expertise in web development,web design, photo editing, and video editing, continuously striving for excellence in my work. <br />
-    &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;
-    When I'm not immersed in code, you'll often find me navigating virtual realms or exploring the latest PC games. Gaming isn't just a pastime it's a wellspring of inspiration that fuels my creativity in web development. I'm passionate about infusing my projects with the same excitement and engagement that games evoke. <br />
-    &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
-    Away from the digital domain, I find solace in the open road and the allure of new horizons. Adventure is my muse, permeating my work with a sense of wonder and exploration. Each project is an opportunity to capture the essence of diverse cultures and natural landscapes, creating visually striking and authentic experiences. Thank you for dropping by my website I'm thrilled at the prospect of collaborating with you to bring your digital vision to life!
+    <p style="text-align: justify; line-height: 27px;">
+    Hello and welcome! I’m <span style="color: rgb(255, 0, 79); font-weight: bolder;">Pavan Satyappanavar</span>, a passionate Full Stack Web Developer. My journey began at Jain College of Engineering, where I built a strong foundation in technology. Since then, I have focused on improving my skills in web development, web design, photo editing, and video editing. I take pride in delivering high-quality work that meets both creative and technical goals.
+    <br><br>
+    Outside of development, I enjoy playing PC games, which inspire many of my creative ideas. Gaming helps me think differently and bring more interactive and engaging elements into my projects.
+    <br><br>
+    I also enjoy traveling and exploring new places. These experiences give me fresh perspectives that I apply to my work, helping me create designs that are both unique and meaningful.
+    <br><br>
+    Thank you for visiting my portfolio. I look forward to the opportunity to work together and bring your ideas to life in a professional and creative way.
     </p>
-      </div>
+    </div>
     <div className='myIntrosecondSection'>
     <FlipCard/>
     </div>
