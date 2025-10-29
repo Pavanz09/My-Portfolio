@@ -1,107 +1,90 @@
-.SkillsContainer{
+.ServicesContainer {
     margin: auto;
     width: 90%;
     padding: 30px;
-    /* border: 1px solid #FF004F;  */
-    background-color: #0f0f0f;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
-.skillsMain{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 40px;
+
+.servicesHeader {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
 }
-.skillsBody{
-    height: 235px;
-    width: 45%;
-    background-color:#242424;
-    border: 1px solid #FF004F;
-    border-radius: 15px;
-    padding-bottom: 20px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+
+.servicesMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
-.skillsBody:hover{
-    transition: 0.2s ease-in all;
-    transform: translateY(5px);
-    box-shadow: 0px 0px 35px -20px rgba(255,0,79,1);
-    -webkit-transition: 0.2s ease-in all;
-    -moz-transition: 0.2s ease-in all;
-    -ms-transition: 0.2s ease-in all;
-    -o-transition: 0.2s ease-in all;
-    -webkit-transform: translateY(5px);
-    -moz-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
+
+.serviceCard {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 13px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  border-color: #FF004F;
+  box-shadow: 0 12px 24px rgba(255, 0, 79, 0.25);
+}
+
+.serviceIconBox {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.serviceTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.serviceDescription {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  color: #ccc;
+  margin-bottom: 14px;
+}
+
+.serviceTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.serviceTag {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: #fff;
+  transition: 0.3s;
 }
 .skillsHeader{
-    text-align: center;
+        margin:0px 0px 50px 0px;
 }
-.techStackBody{
+
+
+@media (max-width: 768px) {
+  .servicesMain {
     width: 90%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-}
-.techStack{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    margin: 10px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-.techStackData{
-    padding: 5px 10px;
-    margin: 0;
-}
-.colorDescriptionBox{
-    display: flex;
-    gap: 15px
-    align-items: flex-start;
-    margin: 60px 0px 15px 0px;
-    height: fit-content;
-    width: fit-content;
-    padding: 0px 15px 0px 15px;
-    background-color: transparent;
-}
-.colorDescriptionBoxName{
-    margin-bottom: -15px;
-}
-.professionalSkillsHeader{
-    margin:0px 0px 50px 0px;
-}
-@media only screen and (max-width: 768px) {
-    .skillsBody{
-        height: max-content;
-        width: 90%;
-    }
-    .SkillsContainer{
-        padding: 0;
-    }
-    .colorDescriptionBox {
-        gap: 9px;
-        flex-direction: row;
-        margin: auto;
-    }
-    .colorDescriptionBoxName{
-        margin-bottom: 20px;
-    }
-    .professionalSkillsHeader{
-       text-align: center;
-    }
+  }
+  .serviceCard {
+    width: 100%;
+  }
 }

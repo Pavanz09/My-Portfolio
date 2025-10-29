@@ -1,0 +1,87 @@
+.resumeContainer {
+    margin: auto;
+    width: 90%;
+    padding: 30px;
+}
+
+.resumeHeader {
+ margin:0px 0px 50px 0px;
+}
+
+.resumeSections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.resumeColumn {
+  flex: 1;
+  min-width: 340px;
+  max-width: 500px;
+}
+
+.resumeSectionTitle {
+  background-color: #FF004F;
+  color: black;
+  font-weight: 700;
+  padding: 12px 24px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.resumeCard {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #FF004F;
+  box-shadow: 0 4px 12px rgba(253, 16, 16, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resumeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(244, 41, 41, 0.25);
+}
+
+.resumeDate {
+  color: #FF004F;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.resumeTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.resumeCompany {
+  font-weight: 600;
+  color: #FF004F;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.resumeLocation {
+  color: #e4e4e4;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.resumeAboutCompany {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.resumeBullets {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

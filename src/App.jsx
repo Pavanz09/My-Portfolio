@@ -4,6 +4,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Resume from './components/Resume';
 import NavigationBar from './components/NavigationBar';
 import BottomNavBar from './components/BottomNavbar';
 import '../src/App.css';
@@ -17,6 +18,7 @@ const App = () => {
     <MainPage/>
     <About/>
     <Skills/> 
+    <Resume/>
     <Projects/>
     <Contact/>
     <CopyRightFooter/>
