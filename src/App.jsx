@@ -31,7 +31,7 @@ export default App;
 function CopyRightFooter(){
   return(
     <div className="copyright">
-      <p className="copyRightText">&copy; Pavan Satyappanavar 2024 All Rights Reserved</p>
+      <p className="copyRightText">&copy; Pavan Satyappanavar 2025 All Rights Reserved</p>
     </div>
   )
 }

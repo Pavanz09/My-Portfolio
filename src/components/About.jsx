@@ -1,7 +1,4 @@
-import React from 'react';
 import '../styles/About.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import myProfileImage from '../assets/IMG_20180320_141506.jpg';
 
 const About = () => {
@@ -27,10 +24,6 @@ const About = () => {
               Thank you for taking the time to explore my portfolio. I’m excited about the opportunity to collaborate and contribute to meaningful digital experiences.
             </p>
           </div>
-
-          <div className='myIntrosecondSection'>
-            <FlipCard />
-          </div>
         </div>
 
         <div className='myImageContainer'>
@@ -43,45 +36,3 @@ const About = () => {
 
 export default About;
 
-function FlipCard() {
-  const FlipCardData = [
-    {
-      title: 'Experience',
-      subTitle: '2+ Years',
-      backCardTitle: 'ATOM8 Robotic Labs Pvt Ltd',
-      position: 'Software Development Engineer 1',
-      icon: faStar
-    },
-    {
-      title: 'Education',
-      subTitle: 'Bachelor of Engineering',
-      backCardTitle: 'Jain College of Engineering',
-      position: 'Electronics & Communication',
-      icon: faGraduationCap
-    },
-  ];
-
-  return (
-    <>
-      {FlipCardData.map((exp, index) => (
-        <div className="myIntrocontainer" key={index}>
-          <div className="cardContainer">
-            <div className="frontCard">
-              <h3 style={{ textAlign: 'center', margin: '0' }}>
-                <FontAwesomeIcon style={{ color: '#FF004F' }} icon={exp.icon} />&nbsp;
-                {exp.title}
-              </h3>
-              <h4 style={{ textAlign: 'center', color: '#969696', margin: '0' }}>
-                {exp.subTitle}
-              </h4>
-            </div>
-            <div className="backCard">
-              <h3 style={{ margin: '0' }}>{exp.backCardTitle}</h3>
-              <p style={{ margin: '0', color: '#bbbbbb' }}>{exp.position}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </>
-  );
-}
