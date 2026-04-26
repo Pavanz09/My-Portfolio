@@ -13,15 +13,21 @@ import '../src/App.css';
 const App = () => {
   return (
     <>
-    <NavigationBar/>
-    <BottomNavBar/>
-    <MainPage/>
-    <About/>
-    <Skills/> 
-    <Resume/>
-    <Projects/>
-    <Contact/>
-    <CopyRightFooter/>
+    <header>
+      <NavigationBar/>
+      <BottomNavBar/>
+    </header>
+    <main>
+      <MainPage/>
+      <About/>
+      <Skills/> 
+      <Resume/>
+      <Projects/>
+      <Contact/>
+    </main>
+    <footer>
+      <CopyRightFooter/>
+    </footer>
     </>
   );
 };

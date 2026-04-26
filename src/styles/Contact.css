@@ -1,173 +1,154 @@
-.ContactUsContainer{
-    display: flex;
-    justify-content:center ;
-    align-items: center;
-}
-.contactMainContainer{
-    margin: auto;
+.contactMainContainer {
+    margin: 80px auto;
     width: 90%;
 }
-.contactCard{
+
+.contactMeHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ContactUsContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    /* background-color: #1e1e1e; */
 }
-.contactCardBody{
+
+.contactCard {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.contactCardBody {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1px #FF004F solid;
-    background-color: #0f0f0f;
-    border-radius: 10px;
-    width: 90%;
-    height: 550px;
-    margin-bottom: 30px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-.contactUsHeader{
-    display: flex;
-    margin-top: -25px;
-    margin-left: 45px;
-    position: relative;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0px 20px 0px 20px;
-    background-color: #242424;
-    color: #fff;
+    grid-template-columns: 1.2fr 0.8fr;
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-.inputContainer{
+.cardLeft {
+    padding: 50px;
+    border-right: 1px solid #222;
+}
+
+.inputContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-}
-.inputFields{
-    width: 75%;
-    height: 20px;
-    background-color: transparent;
-    border: 1px solid #FF004F;
-    padding: 20px;
-    color: #fff;
-    font-size: larger;
-    font-family: sans-serif;
+    gap: 20px;
 }
 
-.messageBox{
-    width: 75%;
+.inputFields, .messageBox {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.inputFields:focus, .messageBox:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 0, 79, 0.1);
+    background-color: #1f1f1f;
+}
+
+.messageBox {
     height: 150px;
-    background-color: transparent;
-    border: 1px solid #FF004F;
+    resize: none;
+}
+
+.contactSubmit {
+    margin-top: 30px;
+    padding: 15px 40px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.2);
+}
+
+.contactSubmit:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 79, 0.4);
+    filter: brightness(1.1);
+}
+
+.cardRight {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(to bottom right, #111, #161616);
+}
+
+.socialPlatform {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     padding: 20px;
-    color: #fff;
-    font-size: larger;
-    font-family: sans-serif;
-    text-align: start;
-}
-.contactSubmit{
-    padding: 10px;
-    color: #fff;
-    width: 40%;
-    border-radius: 10px;
-    background-color: #0f0f0f;
-    border: 1px solid #FF004F;
-    transform: translate(75%, 125%);
-    font-size: 20px;
-    font-weight: bolder;
-    margin-top: -25px;
-
-}
-.contactSubmit:hover{
-    color: #fff;
-    background-color: #FF004F;
-    border-radius: 0px;
-    border: 1px solid #fff;
-    transition: all ease-in 0.1s;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    -webkit-transition: all ease-in 0.1s;
-    -moz-transition: all ease-in 0.1s;
-    -ms-transition: all ease-in 0.1s;
-    -o-transition: all ease-in 0.1s;
-}
-.cardRight{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    /* border: 1px solid #FF004F; */
-    gap: 0px;
-}
-.socialPlatform{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    border: 1px solid #FF004F;
-    /* background: linear-gradient(rgba(0, 0, 0, 0.899),#FF004F); */
-    border-radius: 20px;
-    width: 70%;
-    height: 120px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-
-}
-.socialPlatformHeader{
-    margin: 0px;
-    color: #adadad;
-}
-.SocialContactLinks{
-    color: rgb(255, 0, 79);
-    font-size: 12px;
-    transition: 0.3s ease-in-out all;
-    -webkit-transition: 0.3s ease-in-out all;
-    -moz-transition: 0.3s ease-in-out all;
-    -ms-transition: 0.3s ease-in-out all;
-    -o-transition: 0.3s ease-in-out all;
-}
-.SocialContactLinks:hover{
-    color: #ffff;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: all 0.3s ease;
 }
 
-@media only screen and (max-width: 768px) {
-    .contactCardBody{
-        display: flex;
-        flex-direction: column;
-        width: 85%;
-        padding: 10px;
-        height: max-content;
+.socialPlatform:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 0, 79, 0.3);
+    transform: scale(1.02);
+}
+
+.socialPlatformHeader {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.SocialContactLinks {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.SocialContactLinks:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
+    .contactCardBody {
+        grid-template-columns: 1fr;
     }
-    .contactCard{
-        width: 100%;
-        height: max-content;
+    .cardLeft {
+        border-right: none;
+        border-bottom: 1px solid #222;
+        padding: 40px;
     }
-    .cardLeft{
-        margin-bottom: 100px;
+    .cardRight {
+        padding: 40px;
     }
-    .cardRight{
-        margin-top: 40px;
-        gap: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    .cardLeft, .cardRight {
+        padding: 30px 20px;
     }
-    .socialPlatform{
-        width: 100%;
+    .socialPlatform {
+        padding: 15px;
     }
-    .socialPlatformHeader{
-        font-size: 13px;
-    }
-    .contactMeHeader{
-        text-align: center;
-    }
-    .contactMainContainer{
-        width: fit-content;
-    }
-  };
+}

@@ -1,87 +1,124 @@
 .resumeContainer {
-    margin: auto;
+    margin: 80px auto;
     width: 90%;
-    padding: 30px;
 }
 
 .resumeHeader {
- margin:0px 0px 50px 0px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .resumeSections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .resumeColumn {
-  flex: 1;
-  min-width: 340px;
-  max-width: 500px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 550px;
 }
 
 .resumeSectionTitle {
-  background-color: #FF004F;
-  color: black;
-  font-weight: 700;
-  padding: 12px 24px;
-  text-align: center;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+.resumeSectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
 .resumeCard {
-  background-color: #000000;
-  border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 25px;
-  border: 1px solid #FF004F;
-  box-shadow: 0 4px 12px rgba(253, 16, 16, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #111;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
 }
 
 .resumeCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(244, 41, 41, 0.25);
+    transform: translateX(10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .resumeDate {
-  color: #FF004F;
-  font-weight: 600;
-  margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .resumeTitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 6px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text-primary);
 }
 
 .resumeCompany {
-  font-weight: 600;
-  color: #FF004F;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-.resumeLocation {
-  color: #e4e4e4;
-  font-size: 0.85rem;
-  margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
 .resumeAboutCompany {
-  color: #aaa;
-  font-size: 0.85rem;
-  margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.resumeLocation {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
 }
 
 .resumeBullets {
-  list-style-type: disc;
-  padding-left: 20px;
-  color: #ccc;
-  font-size: 0.9rem;
-  line-height: 1.5;
+    list-style-type: none;
+    padding-left: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.resumeBullets li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.resumeBullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .resumeColumn {
+        min-width: 100%;
+    }
+    .resumeCard {
+        padding: 20px;
+    }
 }

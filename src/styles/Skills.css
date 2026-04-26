@@ -1,90 +1,100 @@
 .ServicesContainer {
-    margin: auto;
+    margin: 80px auto;
     width: 90%;
-    padding: 30px;
 }
 
-.servicesHeader {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
+.skillsHeader {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
 }
 
 .servicesMain {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
 }
 
 .serviceCard {
-  width: 300px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 13px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 35px;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .serviceCard:hover {
-  transform: translateY(-8px);
-  border-color: #FF004F;
-  box-shadow: 0 12px 24px rgba(255, 0, 79, 0.25);
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 0, 79, 0.1);
 }
 
 .serviceIconBox {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 12px;
-  transition: all 0.3s ease;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    background: rgba(255, 0, 79, 0.1);
+    transition: all 0.4s ease;
+}
+
+.serviceCard:hover .serviceIconBox {
+    background: var(--primary-color);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.serviceCard:hover .serviceIconBox svg {
+    color: #fff !important;
 }
 
 .serviceTitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-primary);
 }
 
 .serviceDescription {
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-  color: #ccc;
-  margin-bottom: 14px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    flex-grow: 1;
 }
 
 .serviceTags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .serviceTag {
-  font-size: 0.8rem;
-  padding: 5px 10px;
-  border-radius: 999px;
-  color: #fff;
-  transition: 0.3s;
-}
-.skillsHeader{
-        margin:0px 0px 50px 0px;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 50px;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
+.serviceCard:hover .serviceTag {
+    border-color: rgba(255, 0, 79, 0.3);
+    color: var(--text-primary);
+}
 
 @media (max-width: 768px) {
-  .servicesMain {
-    width: 90%;
-  }
-  .serviceCard {
-    width: 100%;
-  }
+    .servicesMain {
+        grid-template-columns: 1fr;
+    }
+    .serviceCard {
+        padding: 25px;
+    }
 }

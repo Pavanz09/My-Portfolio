@@ -1,45 +1,23 @@
 import React from "react";
 import "../styles/Projects.css";
-import otpImage from "../assets/sms-authentication-banner.jpg";
-import loanImage from "../assets/Best-Instant-Personal-Loan-Apps-in-India-1.jpg";
-import hrms from "../assets/HRMS.png";
-
-const projects = [
-  {
-    title: "User Login OTP Integration",
-    desc: "Secure OTP-based authentication integrated with MobTexting API for smooth onboarding.",
-    tech: ["AngularJS", "Java", "MobTexting API", "MySQL"],
-    image: otpImage,
-  },
-  {
-    title: "Lead & Client Management",
-    desc: "CRM system for efficient lead tracking and communication handling.",
-    tech: ["Java", "Spring Boot", "Hibernate", "PostgreSQL"],
-    image: loanImage,
-  },
-  {
-    title: "Human Resource Management System",
-    desc: "Comprehensive HRMS platform managing employees, payroll, and attendance.",
-    tech: ["PostgreSQL", "Express", "React", "Node.js"],
-    image: hrms,
-  },
-];
+import { projectsData } from "../data/projects";
 
 const Projects = () => {
   return (
-    <div className='ServicesContainer' id='services'>
-    <h1 className='projectsHeader'>My <span style={{ color: '#FF004F' }}>Portfolio</span></h1>
-    <section className="projects-section" id="projects">
+    <section className='ServicesContainer' id='projects'>
+      <h1 className='projectsHeader'>My <span style={{ color: '#FF004F' }}>Work</span></h1>
       <div className="projects-grid">
-        {projects.map((project, i) => (
-          <div className="project-box" key={i}>
-            <img src={project.image} alt={project.title} className="project-img" />
-            <div className="info-box">
-              <h3>{project.title}</h3>
-              <p>{project.desc}</p>
-              <div className="tech-tags">
+        {projectsData.map((project, i) => (
+          <div className="project-card" key={i}>
+            <div className="project-content">
+              <div className="project-top-meta">
+                <span className="project-company">{project.company}</span>
+              </div>
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.desc}</p>
+              <div className="project-tech-stack">
                 {project.tech.map((t, idx) => (
-                  <span key={idx}>{t}</span>
+                  <span key={idx} className="tech-badge">{t}</span>
                 ))}
               </div>
             </div>
@@ -47,7 +25,6 @@ const Projects = () => {
         ))}
       </div>
     </section>
-    </div>
   );
 };
 

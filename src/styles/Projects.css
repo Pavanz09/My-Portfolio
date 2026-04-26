@@ -1,107 +1,122 @@
-.projects-section {
-  background: #000000;
-  color: #fff;
+.projectsHeader {
+    text-align: center;
+    margin: 80px 0 60px 0;
+    font-size: 2.5rem;
 }
 
-.projects-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-}
-
-
-.projectsHeader{
-    margin:0px 0px 50px 0px;
-}
-
-/* --- Masonry Grid Layout --- */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: 300px;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+    width: 100%;
 }
 
-/* --- Each Project Box --- */
-.project-box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.project-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.project-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.4s ease;
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
 }
 
-.project-box:hover .project-img {
-  transform: scale(1.1);
-  filter: brightness(0.2);
+.project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 0, 79, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Floating Info Box --- */
-.info-box {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: #ebe6e6;
-  color: #111;
-  padding: 16px 20px;
-  border-radius: 10px;
-  max-width: 80%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
+.project-card:hover::before {
+    transform: scaleX(1);
 }
 
-.project-box:hover .info-box {
-  opacity: 1;
-  transform: translateY(0);
+.project-top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* --- Text Styling --- */
-.info-box h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ff004f;
-  margin-bottom: 6px;
+.project-tag-top {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 1.5px;
+    opacity: 0.9;
 }
 
-.info-box p {
-  font-size: 0.9rem;
-  color: #1f1e1e;
-  margin-bottom: 10px;
+.project-company {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    opacity: 0.7;
+    letter-spacing: 1px;
 }
 
-/* --- Tech Tags --- */
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.project-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
-.tech-tags span {
-  background: #ff004f;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 5px 10px;
-  border-radius: 20px;
+.project-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
 }
 
-/* Responsive */
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.tech-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #eee;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .tech-badge {
+    border-color: rgba(255, 0, 79, 0.4);
+    color: #fff;
+}
+
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  .info-box {
-    bottom: 10px;
-    left: 10px;
-    max-width: 90%;
-  }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        padding: 30px;
+    }
 }
