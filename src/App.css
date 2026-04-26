@@ -1,6 +1,38 @@
-.copyright{
+.copyright {
   width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding: 28px 0;
+  margin-top: 80px;
 }
-.copyRightText{
-  text-align: center;
+
+.copyright .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copyRightText {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.copyRightText span {
+  color: var(--primary-color);
+}
+
+.copyMeta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+@media (max-width: 768px) {
+  .copyright {
+    margin-bottom: 90px;
+  }
 }

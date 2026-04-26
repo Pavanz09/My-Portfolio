@@ -1,4 +1,3 @@
-import React from 'react';
 import MainPage from './components/MainPage';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -7,37 +6,33 @@ import Skills from './components/Skills';
 import Resume from './components/Resume';
 import NavigationBar from './components/NavigationBar';
 import BottomNavBar from './components/BottomNavbar';
-import '../src/App.css';
+import './App.css';
 
-
-const App = () => {
-  return (
-    <>
-    <header>
-      <NavigationBar/>
-      <BottomNavBar/>
-    </header>
+const App = () => (
+  <>
+    <NavigationBar />
+    <BottomNavBar />
     <main>
-      <MainPage/>
-      <About/>
-      <Skills/> 
-      <Resume/>
-      <Projects/>
-      <Contact/>
+      <MainPage />
+      <About />
+      <Skills />
+      <Resume />
+      <Projects />
+      <Contact />
     </main>
-    <footer>
-      <CopyRightFooter/>
-    </footer>
-    </>
-  );
-};
+    <CopyRightFooter />
+  </>
+);
 
 export default App;
 
-function CopyRightFooter(){
-  return(
-    <div className="copyright">
-      <p className="copyRightText">&copy; Pavan Satyappanavar 2025 All Rights Reserved</p>
-    </div>
-  )
+function CopyRightFooter() {
+  return (
+    <footer className="copyright">
+      <div className="container">
+        <p className="copyRightText">&copy; Pavan Satyappanavar {new Date().getFullYear()} <span>·</span> All Rights Reserved</p>
+        <p className="copyMeta">Built with React + Vite</p>
+      </div>
+    </footer>
+  );
 }

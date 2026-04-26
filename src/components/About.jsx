@@ -1,38 +1,73 @@
 import '../styles/About.css';
-import myProfileImage from '../assets/IMG_20180320_141506.jpg';
+import SectionMarker from './SectionMarker';
 
 const About = () => {
   return (
-    <>
-      <div className='aboutMainContainer' id='about'>
-        <div className='myIntroConatiner'>
-          <h1>
-            About<span style={{ color: '#FF004F', margin: '0px' }}> Me</span>
-          </h1>
-          <div className='myIntroduction'>
-            <p style={{ textAlign: 'justify', lineHeight: '27px' }}>
-              Hello and welcome! I’m{' '}
-              <span style={{ color: 'rgb(255, 0, 79)', fontWeight: 'bolder' }}>
-                Pavan Satyappanavar
-              </span>
-              , a Software Development Engineer with over 3 years of experience specializing in high-scale IoT ecosystems and Multi-OEM architectures. My journey has evolved from building responsive UI components to architecting complex, brand-isolated mobile platforms and robust cloud-to-device integrations.
-              <br />
-              Currently, at Atom8 Robotic Labs, I lead the development of multi-tenant React Native applications and scalable backend systems using Node.js, AWS, and Kafka. I am deeply focused on the intersection of **Infrastructure and Application Logic**—ensuring that the systems I build are not just functional, but also highly available, secure, and ready to scale.
-              <br />
-              My 2025 contributions have been centered around automating deployment pipelines with GitLab CI/CD, bridging Smart Home ecosystems (Google Home/Alexa), and exploring embedded firmware to better understand the full end-to-end device lifecycle.
-              <br />
-              Outside of the terminal, I draw inspiration from travel and PC gaming, which help me approach system design with a perspective on interactivity and exploration. I am always excited about collaborating on meaningful digital experiences that push the boundaries of technology.
+    <section className='aboutSection section' id='about'>
+      <div className='container'>
+        <SectionMarker num='01' label='Profile'>
+          About <em>me</em>.
+        </SectionMarker>
+
+        <div className='about-body'>
+          <div className='about-intro'>
+            <p>
+              Hello and welcome — I'm <strong>Pavan Satyappanavar</strong>, a
+              Software Development Engineer with over <strong>3 years</strong>
+              of experience specializing in high-scale IoT ecosystems and
+              Multi-OEM architectures. My journey has evolved from building
+              responsive UI components to architecting complex, brand-isolated
+              mobile platforms and robust cloud-to-device integrations.
             </p>
           </div>
-        </div>
 
-        <div className='myImageContainer'>
-          <img src={myProfileImage} alt="My Image" className='profilePic' />
+          <blockquote className='about-pull'>
+            "I'm focused on the intersection of <em>infrastructure</em> and
+            <em> application logic</em> — building systems that are not just
+            functional, but highly available, secure, and ready to scale."
+          </blockquote>
+
+          <div className='about-grid'>
+            <div className='about-block'>
+              <span className='about-tag'>Now</span>
+              <h3>Atom8 Robotic Labs</h3>
+              <p>
+                Leading multi-tenant React Native applications and scalable
+                backend systems with Node.js, AWS, and Kafka. Bridging
+                Smart Home ecosystems (Google Home / Alexa) and exploring
+                embedded firmware end-to-end.
+              </p>
+            </div>
+            <div className='about-block'>
+              <span className='about-tag'>Then</span>
+              <h3>From UI to Architecture</h3>
+              <p>
+                Started with responsive UIs at TekSolvent, automated banking
+                login flows at Intelligrow, and now architect device
+                lifecycle systems serving thousands of homes.
+              </p>
+            </div>
+            <div className='about-block'>
+              <span className='about-tag'>Off-screen</span>
+              <h3>Travel & PC Gaming</h3>
+              <p>
+                Inspiration from places I've explored and games I've spent
+                too many hours in. Both shape how I think about systems —
+                interactive, exploratory, and always responsive.
+              </p>
+            </div>
+          </div>
+
+          <div className='about-strip'>
+            <div><span>Bengaluru, IN</span><small>Location</small></div>
+            <div><span>SDE I @ Atom8</span><small>Role</small></div>
+            <div><span>3+ Years</span><small>Experience</small></div>
+            <div><span>Web · Mobile · IoT · Cloud · DevOps</span><small>Stack focus</small></div>
+          </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
 export default About;
-

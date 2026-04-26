@@ -1,100 +1,137 @@
-.ServicesContainer {
-    margin: 80px auto;
-    width: 90%;
-}
+.skillsSection { position: relative; }
 
-.skillsHeader {
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 2.5rem;
-}
-
-.servicesMain {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-.serviceCard {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 35px;
-    backdrop-filter: blur(12px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.skill-rows {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
-.serviceCard:hover {
-    transform: translateY(-12px);
-    background: rgba(255, 255, 255, 0.06);
-    border-color: var(--primary-color);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 0, 79, 0.1);
+.skill-row {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 32px;
+    padding: 32px 16px;
+    border-top: 1px solid var(--border-color);
+    border-left: 2px solid transparent;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    position: relative;
 }
 
-.serviceIconBox {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
+.skill-row:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skill-row:hover {
+    border-left-color: var(--primary-color);
+    background: rgba(255, 0, 79, 0.025);
+}
+
+.skill-row-num {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
-    background: rgba(255, 0, 79, 0.1);
-    transition: all 0.4s ease;
+    align-items: flex-start;
+    padding-top: 8px;
 }
 
-.serviceCard:hover .serviceIconBox {
-    background: var(--primary-color);
-    transform: scale(1.1) rotate(5deg);
-}
-
-.serviceCard:hover .serviceIconBox svg {
-    color: #fff !important;
-}
-
-.serviceTitle {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--text-primary);
-}
-
-.serviceDescription {
+.skill-row-num span {
+    font-family: var(--font-display);
     font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    margin-bottom: 25px;
-    flex-grow: 1;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
 }
 
-.serviceTags {
+.skill-row:hover .skill-row-num span { color: var(--primary-color); }
+
+.skill-row-head {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-row-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 0, 79, 0.08);
+    border: 1px solid rgba(255, 0, 79, 0.25);
+    border-radius: 12px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.skill-row-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.skill-row-desc {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 420px;
+}
+
+.skill-row-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    align-content: flex-start;
+    padding-top: 4px;
 }
 
-.serviceTag {
-    font-size: 0.85rem;
+.skill-row-tag {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 500;
     padding: 6px 14px;
-    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     color: var(--text-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
-.serviceCard:hover .serviceTag {
-    border-color: rgba(255, 0, 79, 0.3);
-    color: var(--text-primary);
+.skill-row-tag:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(255, 0, 79, 0.05);
+    transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .servicesMain {
+@media (max-width: 992px) {
+    .skill-row {
+        grid-template-columns: 56px minmax(0, 1fr);
+        gap: 20px;
+        padding: 28px 0;
+    }
+    .skill-row-tags {
+        grid-column: 2 / -1;
+    }
+}
+
+@media (max-width: 540px) {
+    .skill-row {
         grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px 14px;
     }
-    .serviceCard {
-        padding: 25px;
+    .skill-row-num { padding-top: 0; }
+    .skill-row-num span {
+        display: inline-block;
+        font-size: 0.7rem;
+        color: var(--primary-color);
+        letter-spacing: 0.22em;
+        padding: 4px 10px;
+        background: rgba(255, 0, 79, 0.08);
+        border-radius: 100px;
     }
+    .skill-row-tags { grid-column: auto; }
+    .skill-row-tag { font-size: 0.74rem; padding: 5px 11px; }
+    .skill-row-title { font-size: 1.2rem; }
 }

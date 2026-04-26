@@ -1,17 +1,26 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
-import "../styles/Contact.css";
+import '../styles/Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faInstagram, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
+import SectionMarker from './SectionMarker';
+import { SOCIAL, EMAIL_HREF } from '../data/socials';
+
+const CONTACT_CARDS = [
+  { icon: faEnvelope,     label: 'EMAIL',     href: EMAIL_HREF,    value: SOCIAL.email },
+  { icon: faLinkedin,     label: 'LINKEDIN',  href: SOCIAL.linkedin, value: 'Pavan Satyappanavar' },
+  { icon: faSquareGithub, label: 'GITHUB',    href: SOCIAL.github,   value: '@Pavanz09' },
+  { icon: faInstagram,    label: 'INSTAGRAM', href: SOCIAL.instagram, value: '@pavanz09' },
+];
 
 export default function Contact() {
-  const formRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMsg, setStatusMsg] = useState('');
 
   function sendEmail(e) {
     e.preventDefault();
+    const form = e.target;
     setIsSubmitting(true);
     setStatusMsg('');
 
@@ -19,84 +28,113 @@ export default function Contact() {
       setTimeout(() => {
         setStatusMsg('Email service is disabled on localhost. Please use the deployed version.');
         setIsSubmitting(false);
-      }, 1000);
+      }, 800);
       return;
     }
 
-    const formData = new FormData(e.target);
+    const formData = new FormData(form);
     const templateParams = {
       from_name: formData.get('from_name'),
       message: formData.get('message'),
       email: formData.get('email'),
-      mobileno: formData.get('mobileno')
+      mobileno: formData.get('mobileno'),
     };
 
     emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID || import.meta.env.REACT_APP_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || import.meta.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       templateParams,
-      import.meta.env.VITE_EMAILJS_USER_ID || import.meta.env.REACT_APP_EMAILJS_USER_ID
+      import.meta.env.VITE_EMAILJS_USER_ID
     )
-    .then(() => {
-      setStatusMsg('Email sent successfully!');
-      formRef.current.reset();
-    })
-    .catch((error) => {
-      setStatusMsg('An error occurred. Please try again later.');
-      console.error(error);
-    })
-    .finally(() => {
-      setIsSubmitting(false);
-    });
+      .then(() => {
+        setStatusMsg('Email sent successfully!');
+        form.reset();
+      })
+      .catch(() => {
+        setStatusMsg('An error occurred. Please try again later.');
+      })
+      .finally(() => setIsSubmitting(false));
   }
 
+  const isSuccess = statusMsg.toLowerCase().includes('success');
+
   return (
-    <section className='contactMainContainer' id='contact'>
-      <h1 className='contactMeHeader'>Contact<span style={{ color: '#FF004F' }}> Me</span></h1>
-      <div className="ContactUsContainer">
-        <div className="contactCard">
-          <div className="contactCardBody">
-            <div className="cardLeft">
-              <form ref={formRef} onSubmit={sendEmail} className="formAlign">
-                <div className="inputContainer">
-                  <input type="text" placeholder="Name" name="from_name" className="inputFields" required />
-                  <input type="text" name="mobileno" placeholder="Mobile no" className="inputFields" required />
-                  <input type="email" name="email" placeholder="Email Id" className="inputFields" required />
-                  <textarea name="message" cols="30" rows="10" className="messageBox" placeholder="Message" required></textarea>
-                </div>
-                {statusMsg && <p className="statusMessage" style={{ color: statusMsg.includes('success') ? '#4BB543' : '#FF004F', fontSize: '14px', marginTop: '10px' }}>{statusMsg}</p>}
-                <button 
-                  type="submit" 
-                  className="contactSubmit" 
-                  disabled={isSubmitting}
-                  style={{ opacity: isSubmitting ? 0.6 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}
-                >
-                  {isSubmitting ? 'Sending...' : 'Submit'}
-                </button>
-              </form>
-            </div>
-            <div className="cardRight">
-              <div className="socialPlatform">
-                <p style={{ margin: '0px' }}><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '20px', color: '#FF004F' }} /> Email </p>
-                <h3 className='socialPlatformHeader'>pavansatyappanavar6@gmail.com</h3>
-                <a href="mailto:pavansatyappanavar6@gmail.com" className='SocialContactLinks'>Send Message</a>
+    <section className='contactSection section' id='contact'>
+      <div className='container'>
+        <SectionMarker num='05' label='Get In Touch'>
+          Let's <em>build</em> something.
+        </SectionMarker>
+
+        <div className='contact-headline'>
+          <h2>
+            Have a project in mind, a role to discuss, or just want to
+            <span> say hi?</span> The fastest way is below.
+          </h2>
+        </div>
+
+        <div className='contact-grid'>
+          <div className='contact-form-wrap'>
+            <form onSubmit={sendEmail} className='contact-form'>
+              <div className='form-row'>
+                <label className='field'>
+                  <span>Your Name</span>
+                  <input type="text" name="from_name" placeholder="John Doe" required />
+                </label>
+                <label className='field'>
+                  <span>Mobile</span>
+                  <input type="text" name="mobileno" placeholder="+91 98765 43210" required />
+                </label>
               </div>
-              <div className="socialPlatform">
-                <p style={{ margin: '0px' }}><FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '20px', color: '#FF004F' }} /> LinkedIn </p>
-                <h3 className='socialPlatformHeader'>Pavan Satyappanavar</h3>
-                <a href="https://www.linkedin.com/in/pavan-satyappanavar-b54a11243/" target="_blank" rel="noopener noreferrer" className='SocialContactLinks'>Connect</a>
-              </div>
-              <div className="socialPlatform">
-                <p style={{ margin: '0px' }}><FontAwesomeIcon icon={faInstagram} style={{ fontSize: '20px', color: '#FF004F' }} /> Instagram </p>
-                <h3 className='socialPlatformHeader'>@pavanz09</h3>
-                <a href="https://instagram.com/pavanz09?igshid=ZDdkNTZiNTM=" target="_blank" rel="noopener noreferrer" className='SocialContactLinks'>Follow</a>
-              </div>
-            </div>
+              <label className='field'>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@domain.com" required />
+              </label>
+              <label className='field'>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Tell me about the role / project / idea..." required />
+              </label>
+
+              {statusMsg && (
+                <p className='form-status' data-success={isSuccess}>
+                  {statusMsg}
+                </p>
+              )}
+
+              <button type="submit" className='form-submit' disabled={isSubmitting}>
+                {isSubmitting ? 'Sending…' : 'Send Message'}
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </form>
           </div>
+
+          <aside className='contact-side'>
+            {CONTACT_CARDS.map(({ icon, label, href, value }) => (
+              <div key={label} className='contact-card'>
+                <div className='cc-icon'><FontAwesomeIcon icon={icon} /></div>
+                <div className='cc-meta'>
+                  <span className='cc-label'>{label}</span>
+                  <a
+                    href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel='noreferrer'
+                    className='cc-value'
+                  >
+                    {value}
+                  </a>
+                </div>
+              </div>
+            ))}
+
+            <div className='contact-availability'>
+              <span className='ca-led' />
+              <div>
+                <strong>Available for new work</strong>
+                <small>Replies within 24h · Bengaluru, IN</small>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
   );
 }
-
-
